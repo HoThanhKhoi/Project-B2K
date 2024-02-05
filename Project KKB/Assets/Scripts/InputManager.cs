@@ -66,13 +66,13 @@ public class InputManager : MonoBehaviour
     {
         gameInputActions = new GameInputActions();
 
-        gameInputActions.Player.Enable();
+        gameInputActions.RPGController.Enable();
         
     }
 
     public Vector2 GetMoveInput()
     {
-        return gameInputActions.Player.Move.ReadValue<Vector2>();
+        return gameInputActions.RPGController.Move.ReadValue<Vector2>();
     }
    
 }

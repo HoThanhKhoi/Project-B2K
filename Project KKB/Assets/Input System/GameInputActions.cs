@@ -24,7 +24,7 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
     ""name"": ""GameInputActions"",
     ""maps"": [
         {
-            ""name"": ""Player"",
+            ""name"": ""RPGController"",
             ""id"": ""8cfc2c53-f100-490a-b0d5-de4c14d8881c"",
             ""actions"": [
                 {
@@ -98,9 +98,9 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Player
-        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        // RPGController
+        m_RPGController = asset.FindActionMap("RPGController", throwIfNotFound: true);
+        m_RPGController_Move = m_RPGController.FindAction("Move", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -159,52 +159,52 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Player
-    private readonly InputActionMap m_Player;
-    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Move;
-    public struct PlayerActions
+    // RPGController
+    private readonly InputActionMap m_RPGController;
+    private List<IRPGControllerActions> m_RPGControllerActionsCallbackInterfaces = new List<IRPGControllerActions>();
+    private readonly InputAction m_RPGController_Move;
+    public struct RPGControllerActions
     {
         private @GameInputActions m_Wrapper;
-        public PlayerActions(@GameInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public RPGControllerActions(@GameInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_RPGController_Move;
+        public InputActionMap Get() { return m_Wrapper.m_RPGController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
-        public void AddCallbacks(IPlayerActions instance)
+        public static implicit operator InputActionMap(RPGControllerActions set) { return set.Get(); }
+        public void AddCallbacks(IRPGControllerActions instance)
         {
-            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_RPGControllerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_RPGControllerActionsCallbackInterfaces.Add(instance);
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
         }
 
-        private void UnregisterCallbacks(IPlayerActions instance)
+        private void UnregisterCallbacks(IRPGControllerActions instance)
         {
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
         }
 
-        public void RemoveCallbacks(IPlayerActions instance)
+        public void RemoveCallbacks(IRPGControllerActions instance)
         {
-            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_RPGControllerActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IPlayerActions instance)
+        public void SetCallbacks(IRPGControllerActions instance)
         {
-            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_RPGControllerActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_RPGControllerActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public PlayerActions @Player => new PlayerActions(this);
-    public interface IPlayerActions
+    public RPGControllerActions @RPGController => new RPGControllerActions(this);
+    public interface IRPGControllerActions
     {
         void OnMove(InputAction.CallbackContext context);
     }
