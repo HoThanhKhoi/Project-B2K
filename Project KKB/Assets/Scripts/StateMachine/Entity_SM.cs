@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Entity : MonoBehaviour
+public abstract class Entity_SM : MonoBehaviour
 {
     protected StateMachine stateMachine;
 
@@ -22,4 +22,5 @@ public abstract class Entity : MonoBehaviour
     protected virtual void Update() { }
 
     protected virtual void FixedUpdate() { }
+    protected virtual void SetUpState() { }
 }

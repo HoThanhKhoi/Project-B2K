@@ -2,7 +2,7 @@
     "name": "GameInputActions",
     "maps": [
         {
-            "name": "Player",
+            "name": "RPGController",
             "id": "8cfc2c53-f100-490a-b0d5-de4c14d8881c",
             "actions": [
                 {

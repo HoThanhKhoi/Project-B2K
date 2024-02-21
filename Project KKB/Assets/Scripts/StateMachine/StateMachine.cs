@@ -14,6 +14,13 @@ public class StateMachine
 
     public virtual void ChangeState(State newState)
     {
+        currentState.Exit();
         currentState = newState;
+        currentState.Enter();
+    }
+
+    public virtual void DebugCurrentState()
+    {
+        Debug.Log(currentState.ToString());
     }
 }
