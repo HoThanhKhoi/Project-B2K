@@ -21,6 +21,6 @@ public class StateMachine
 
     public virtual void DebugCurrentState()
     {
-        Debug.Log(currentState.ToString());
+
     }
 }

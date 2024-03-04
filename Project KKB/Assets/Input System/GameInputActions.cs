@@ -35,6 +35,60 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""E_Skill"",
+                    ""type"": ""Button"",
+                    ""id"": ""373a599e-c454-49b5-844d-9e8b4d737c51"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Q_Skill"",
+                    ""type"": ""Button"",
+                    ""id"": ""2b803e4c-0df1-4455-afb2-85046bfeaa84"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""I_Skill_1"",
+                    ""type"": ""Button"",
+                    ""id"": ""74a350bb-e458-4005-893d-7815045f4348"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""I_Skill_2"",
+                    ""type"": ""Button"",
+                    ""id"": ""60ddc2bb-21ed-48d0-a21c-ff1ad82e08c8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""c9e1b878-877f-4a8e-b621-80770205b277"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hero_Info"",
+                    ""type"": ""Button"",
+                    ""id"": ""516af360-d90c-4347-9b12-0b7b0815739a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -55,7 +109,7 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -66,7 +120,7 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -77,7 +131,7 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -88,19 +142,186 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""88b4c246-ddec-4911-a80e-51179144d6f9"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""E_Skill"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4a00d162-528a-49d9-917c-6f4f0631a2d9"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Q_Skill"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9728427e-0837-4306-946f-17dea9684015"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""I_Skill_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""74fb1e62-4abe-48cb-ae41-fc3651028e17"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""I_Skill_2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""805ae528-6cd9-4cf6-9ee0-2b498bbb353e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed0a1f32-6b3c-4f26-a3f9-727596286464"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Hero_Info"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Mouse"",
+            ""id"": ""908a5bb1-d9d2-4187-8f81-38bcfd6896bc"",
+            ""actions"": [
+                {
+                    ""name"": ""L_Mouse_Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""cf10886f-ed20-4ad5-a8e0-e23bbc62f310"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""R_Mouse_Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""70eabda5-49db-44d1-9be9-c1d3048a1efe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""M_Mouse_Click"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc7afcf0-4317-490b-bace-a68af7759adf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""Value"",
+                    ""id"": ""9ee9d56b-1264-42d3-a5d3-1e7e707fe50b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""c8587087-e255-4c30-a22b-4a08448e24d3"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""L_Mouse_Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d32fd543-1229-4834-9c7d-016b215e8966"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""R_Mouse_Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9e4fef7d-9877-41fe-a7b2-26e34733c760"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Keyboard"",
+            ""bindingGroup"": ""Keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // RPGController
         m_RPGController = asset.FindActionMap("RPGController", throwIfNotFound: true);
         m_RPGController_Move = m_RPGController.FindAction("Move", throwIfNotFound: true);
+        m_RPGController_E_Skill = m_RPGController.FindAction("E_Skill", throwIfNotFound: true);
+        m_RPGController_Q_Skill = m_RPGController.FindAction("Q_Skill", throwIfNotFound: true);
+        m_RPGController_I_Skill_1 = m_RPGController.FindAction("I_Skill_1", throwIfNotFound: true);
+        m_RPGController_I_Skill_2 = m_RPGController.FindAction("I_Skill_2", throwIfNotFound: true);
+        m_RPGController_Dash = m_RPGController.FindAction("Dash", throwIfNotFound: true);
+        m_RPGController_Hero_Info = m_RPGController.FindAction("Hero_Info", throwIfNotFound: true);
+        // Mouse
+        m_Mouse = asset.FindActionMap("Mouse", throwIfNotFound: true);
+        m_Mouse_L_Mouse_Click = m_Mouse.FindAction("L_Mouse_Click", throwIfNotFound: true);
+        m_Mouse_R_Mouse_Click = m_Mouse.FindAction("R_Mouse_Click", throwIfNotFound: true);
+        m_Mouse_M_Mouse_Click = m_Mouse.FindAction("M_Mouse_Click", throwIfNotFound: true);
+        m_Mouse_MousePosition = m_Mouse.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -163,11 +384,23 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_RPGController;
     private List<IRPGControllerActions> m_RPGControllerActionsCallbackInterfaces = new List<IRPGControllerActions>();
     private readonly InputAction m_RPGController_Move;
+    private readonly InputAction m_RPGController_E_Skill;
+    private readonly InputAction m_RPGController_Q_Skill;
+    private readonly InputAction m_RPGController_I_Skill_1;
+    private readonly InputAction m_RPGController_I_Skill_2;
+    private readonly InputAction m_RPGController_Dash;
+    private readonly InputAction m_RPGController_Hero_Info;
     public struct RPGControllerActions
     {
         private @GameInputActions m_Wrapper;
         public RPGControllerActions(@GameInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_RPGController_Move;
+        public InputAction @E_Skill => m_Wrapper.m_RPGController_E_Skill;
+        public InputAction @Q_Skill => m_Wrapper.m_RPGController_Q_Skill;
+        public InputAction @I_Skill_1 => m_Wrapper.m_RPGController_I_Skill_1;
+        public InputAction @I_Skill_2 => m_Wrapper.m_RPGController_I_Skill_2;
+        public InputAction @Dash => m_Wrapper.m_RPGController_Dash;
+        public InputAction @Hero_Info => m_Wrapper.m_RPGController_Hero_Info;
         public InputActionMap Get() { return m_Wrapper.m_RPGController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -180,6 +413,24 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @E_Skill.started += instance.OnE_Skill;
+            @E_Skill.performed += instance.OnE_Skill;
+            @E_Skill.canceled += instance.OnE_Skill;
+            @Q_Skill.started += instance.OnQ_Skill;
+            @Q_Skill.performed += instance.OnQ_Skill;
+            @Q_Skill.canceled += instance.OnQ_Skill;
+            @I_Skill_1.started += instance.OnI_Skill_1;
+            @I_Skill_1.performed += instance.OnI_Skill_1;
+            @I_Skill_1.canceled += instance.OnI_Skill_1;
+            @I_Skill_2.started += instance.OnI_Skill_2;
+            @I_Skill_2.performed += instance.OnI_Skill_2;
+            @I_Skill_2.canceled += instance.OnI_Skill_2;
+            @Dash.started += instance.OnDash;
+            @Dash.performed += instance.OnDash;
+            @Dash.canceled += instance.OnDash;
+            @Hero_Info.started += instance.OnHero_Info;
+            @Hero_Info.performed += instance.OnHero_Info;
+            @Hero_Info.canceled += instance.OnHero_Info;
         }
 
         private void UnregisterCallbacks(IRPGControllerActions instance)
@@ -187,6 +438,24 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @E_Skill.started -= instance.OnE_Skill;
+            @E_Skill.performed -= instance.OnE_Skill;
+            @E_Skill.canceled -= instance.OnE_Skill;
+            @Q_Skill.started -= instance.OnQ_Skill;
+            @Q_Skill.performed -= instance.OnQ_Skill;
+            @Q_Skill.canceled -= instance.OnQ_Skill;
+            @I_Skill_1.started -= instance.OnI_Skill_1;
+            @I_Skill_1.performed -= instance.OnI_Skill_1;
+            @I_Skill_1.canceled -= instance.OnI_Skill_1;
+            @I_Skill_2.started -= instance.OnI_Skill_2;
+            @I_Skill_2.performed -= instance.OnI_Skill_2;
+            @I_Skill_2.canceled -= instance.OnI_Skill_2;
+            @Dash.started -= instance.OnDash;
+            @Dash.performed -= instance.OnDash;
+            @Dash.canceled -= instance.OnDash;
+            @Hero_Info.started -= instance.OnHero_Info;
+            @Hero_Info.performed -= instance.OnHero_Info;
+            @Hero_Info.canceled -= instance.OnHero_Info;
         }
 
         public void RemoveCallbacks(IRPGControllerActions instance)
@@ -204,8 +473,100 @@ public partial class @GameInputActions: IInputActionCollection2, IDisposable
         }
     }
     public RPGControllerActions @RPGController => new RPGControllerActions(this);
+
+    // Mouse
+    private readonly InputActionMap m_Mouse;
+    private List<IMouseActions> m_MouseActionsCallbackInterfaces = new List<IMouseActions>();
+    private readonly InputAction m_Mouse_L_Mouse_Click;
+    private readonly InputAction m_Mouse_R_Mouse_Click;
+    private readonly InputAction m_Mouse_M_Mouse_Click;
+    private readonly InputAction m_Mouse_MousePosition;
+    public struct MouseActions
+    {
+        private @GameInputActions m_Wrapper;
+        public MouseActions(@GameInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @L_Mouse_Click => m_Wrapper.m_Mouse_L_Mouse_Click;
+        public InputAction @R_Mouse_Click => m_Wrapper.m_Mouse_R_Mouse_Click;
+        public InputAction @M_Mouse_Click => m_Wrapper.m_Mouse_M_Mouse_Click;
+        public InputAction @MousePosition => m_Wrapper.m_Mouse_MousePosition;
+        public InputActionMap Get() { return m_Wrapper.m_Mouse; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MouseActions set) { return set.Get(); }
+        public void AddCallbacks(IMouseActions instance)
+        {
+            if (instance == null || m_Wrapper.m_MouseActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_MouseActionsCallbackInterfaces.Add(instance);
+            @L_Mouse_Click.started += instance.OnL_Mouse_Click;
+            @L_Mouse_Click.performed += instance.OnL_Mouse_Click;
+            @L_Mouse_Click.canceled += instance.OnL_Mouse_Click;
+            @R_Mouse_Click.started += instance.OnR_Mouse_Click;
+            @R_Mouse_Click.performed += instance.OnR_Mouse_Click;
+            @R_Mouse_Click.canceled += instance.OnR_Mouse_Click;
+            @M_Mouse_Click.started += instance.OnM_Mouse_Click;
+            @M_Mouse_Click.performed += instance.OnM_Mouse_Click;
+            @M_Mouse_Click.canceled += instance.OnM_Mouse_Click;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
+        }
+
+        private void UnregisterCallbacks(IMouseActions instance)
+        {
+            @L_Mouse_Click.started -= instance.OnL_Mouse_Click;
+            @L_Mouse_Click.performed -= instance.OnL_Mouse_Click;
+            @L_Mouse_Click.canceled -= instance.OnL_Mouse_Click;
+            @R_Mouse_Click.started -= instance.OnR_Mouse_Click;
+            @R_Mouse_Click.performed -= instance.OnR_Mouse_Click;
+            @R_Mouse_Click.canceled -= instance.OnR_Mouse_Click;
+            @M_Mouse_Click.started -= instance.OnM_Mouse_Click;
+            @M_Mouse_Click.performed -= instance.OnM_Mouse_Click;
+            @M_Mouse_Click.canceled -= instance.OnM_Mouse_Click;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
+        }
+
+        public void RemoveCallbacks(IMouseActions instance)
+        {
+            if (m_Wrapper.m_MouseActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IMouseActions instance)
+        {
+            foreach (var item in m_Wrapper.m_MouseActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_MouseActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public MouseActions @Mouse => new MouseActions(this);
+    private int m_KeyboardSchemeIndex = -1;
+    public InputControlScheme KeyboardScheme
+    {
+        get
+        {
+            if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
+            return asset.controlSchemes[m_KeyboardSchemeIndex];
+        }
+    }
     public interface IRPGControllerActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnE_Skill(InputAction.CallbackContext context);
+        void OnQ_Skill(InputAction.CallbackContext context);
+        void OnI_Skill_1(InputAction.CallbackContext context);
+        void OnI_Skill_2(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
+        void OnHero_Info(InputAction.CallbackContext context);
+    }
+    public interface IMouseActions
+    {
+        void OnL_Mouse_Click(InputAction.CallbackContext context);
+        void OnR_Mouse_Click(InputAction.CallbackContext context);
+        void OnM_Mouse_Click(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
 }
